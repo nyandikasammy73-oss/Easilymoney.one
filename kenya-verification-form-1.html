@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kenya Verification – Earn KES 100</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #006600;
+    --green2: #008000;
+    --green-light: #00a000;
+    --red: #BB0000;
+    --gold: #C8A400;
+    --gold2: #FFD700;
+    --bg: #f5f5f0;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666660;
+    --border: #d4d4c8;
+    --card: #ffffff;
+    --surface: #f9f9f4;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    background-image:
+      radial-gradient(circle at 10% 20%, #00660008 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, #BB000005 0%, transparent 50%);
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 560px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── HERO BANNER ── */
+  .hero {
+    background: linear-gradient(135deg, var(--green) 0%, #004d00 60%, #002200 100%);
+    padding: 36px 28px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, #ffffff08, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red) 33.3%, var(--green2) 33.3%, var(--green2) 66.6%, var(--red) 66.6%);
+  }
+
+  /* Kenya flag stripe */
+  .flag-stripe {
+    display: flex;
+    height: 5px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .flag-stripe span {
+    flex: 1;
+  }
+  .flag-stripe .f1 { background: #006600; }
+  .flag-stripe .f2 { background: #CC0000; }
+  .flag-stripe .f3 { background: #006600; }
+
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .coat-badge {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.12);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+  }
+
+  .hero-titles {
+    flex: 1;
+  }
+
+  .hero-kicker {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 2px;
+  }
+
+  /* Reward pill */
+  .reward-pill {
+    background: linear-gradient(135deg, #C8A400, #FFD700);
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  .reward-icon {
+    font-size: 30px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .reward-text {
+    flex: 1;
+  }
+
+  .reward-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #5a4000;
+    margin-bottom: 1px;
+  }
+
+  .reward-amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2a1a00;
+    line-height: 1;
+  }
+
+  .reward-desc {
+    font-size: 11px;
+    color: #6b4e00;
+    margin-top: 2px;
+  }
+
+  .reward-badge {
+    background: #2a1a00;
+    color: var(--gold2);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  /* ── STEPS ── */
+  .steps-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 60%;
+    width: 80%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .step.done:not(:last-child)::after { background: var(--green2); }
+
+  .step-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+    transition: all 0.3s;
+  }
+
+  .step.active .step-num {
+    background: var(--green2);
+    color: #fff;
+    box-shadow: 0 0 0 3px #00800025;
+  }
+
+  .step.done .step-num {
+    background: var(--green2);
+    color: #fff;
+  }
+
+  .step-label {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  .step.active .step-label { color: var(--green2); }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--card);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    padding: 28px;
+  }
+
+  .card:last-of-type {
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-title::before {
+    content: '';
+    width: 3px;
+    height: 16px;
+    background: linear-gradient(to bottom, var(--green), var(--red));
+    border-radius: 2px;
+  }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--green2);
+    box-shadow: 0 0 0 3px #00800015;
+    background: #fff;
+  }
+
+  input.error, select.error { border-color: var(--red); }
+  input.valid, select.valid { border-color: #00800060; }
+  input::placeholder { color: #bbb; }
+
+  .field-error {
+    font-size: 11px;
+    color: var(--red);
+    display: none;
+    margin-top: -2px;
+  }
+  .field-error.visible { display: block; }
+
+  /* Phone row */
+  .phone-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .phone-prefix {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  /* ── ID UPLOAD ── */
+  .upload-note {
+    background: #FFF8E1;
+    border: 1px solid #FFE082;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #7a5900;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .upload-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 18px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .upload-zone:hover {
+    border-color: var(--green2);
+    background: #f0fff0;
+  }
+
+  .upload-zone.has-file {
+    border-color: var(--green2);
+    border-style: solid;
+    background: #f0fff0;
+  }
+
+  .upload-zone.drag-over {
+    border-color: var(--green2);
+    background: #e8ffe8;
+  }
+
+  .upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .upload-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .upload-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .upload-hint {
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .upload-preview {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 8px;
+    display: none;
+    border: 1px solid var(--border);
+  }
+
+  .upload-preview.visible { display: block; }
+
+  .file-name {
+    font-size: 10px;
+    color: var(--green2);
+    font-weight: 600;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
+  }
+
+  .file-name.visible { display: block; }
+
+  /* ── MPESA INFO ── */
+  .mpesa-box {
+    background: linear-gradient(135deg, #f0fff0, #e8f5e9);
+    border: 1.5px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .mpesa-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+
+  .mpesa-text h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 3px;
+  }
+
+  .mpesa-text p {
+    font-size: 12px;
+    color: #3a6a3a;
+    line-height: 1.5;
+  }
+
+  /* ── TERMS ── */
+  .terms-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .terms-row input[type="checkbox"] {
+    width: 16px; height: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--green2);
+    flex-shrink: 0;
+  }
+
+  .terms-row label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+  .terms-row label a {
+    color: var(--green2);
+    text-decoration: underline;
+  }
+
+  /* ── SUBMIT ── */
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--green), #005500);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .submit-btn:hover {
+    background: linear-gradient(135deg, #008000, #006600);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px #00660035;
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .submit-icon { font-size: 18px; }
+
+  .reward-reminder {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .reward-reminder strong { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ── SUCCESS ── */
+  .success-screen {
+    display: none;
+    text-align: center;
+    padding: 40px 28px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .success-screen.visible { display: block; }
+  .card-form.hidden { display: none; }
+
+  .success-flag {
+    font-size: 48px;
+    margin-bottom: 4px;
+  }
+
+  .success-icon {
+    width: 72px; height: 72px;
+    background: #f0fff0;
+    border: 2px solid var(--green2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+
+  .success-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+
+  .success-msg {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .success-reward {
+    background: linear-gradient(135deg, #C8A400, #FFD700);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0 auto 24px;
+    max-width: 280px;
+    animation: fadeUp 0.5s 0.3s ease both;
+  }
+
+  .success-reward-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #5a4000;
+    margin-bottom: 4px;
+  }
+
+  .success-reward-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2a1a00;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .success-reward-note {
+    font-size: 12px;
+    color: #7a5900;
+  }
+
+  .success-mpesa {
+    background: #f0fff0;
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 13px;
+    color: #2e6b2e;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 420px) {
+    .card { padding: 22px 16px; }
+    .upload-grid { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
+    .steps-bar { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="flag-stripe"><span class="f1"></span><span class="f2"></span><span class="f3"></span></div>
+    <div class="hero-top">
+      <div class="coat-badge">🇰🇪</div>
+      <div class="hero-titles">
+        <div class="hero-kicker">Republic of Kenya</div>
+        <div class="hero-title">Identity Verification Form</div>
+        <div class="hero-subtitle">Harambee — Working Together</div>
+      </div>
+    </div>
+    <div class="reward-pill">
+      <div class="reward-icon">💰</div>
+      <div class="reward-text">
+        <div class="reward-label">Completion Reward</div>
+        <div class="reward-amount">KES 100</div>
+        <div class="reward-desc">Sent directly to your M-Pesa upon approval</div>
+      </div>
+      <div class="reward-badge">✓ VERIFIED OFFER</div>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="steps-bar">
+    <div class="step active" id="step1">
+      <div class="step-num">1</div>
+      <div class="step-label">Details</div>
+    </div>
+    <div class="step" id="step2">
+      <div class="step-num">2</div>
+      <div class="step-label">ID Upload</div>
+    </div>
+    <div class="step" id="step3">
+      <div class="step-num">3</div>
+      <div class="step-label">Confirm</div>
+    </div>
+    <div class="step" id="step4">
+      <div class="step-num">✓</div>
+      <div class="step-label">Reward</div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="card-form" id="cardForm">
+
+    <!-- Section 1: Personal Details -->
+    <div class="card">
+      <div class="section-title">Personal Information</div>
+      <div class="field-group">
+        <div class="field-row">
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Wanjiru" />
+            <span class="field-error" id="firstNameErr">Enter your first name.</span>
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name / Surname</label>
+            <input type="text" id="lastName" placeholder="Kamau" />
+            <span class="field-error" id="lastNameErr">Enter your surname.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="wanjiru@gmail.com" />
+          <span class="field-error" id="emailErr">Enter a valid email address.</span>
+        </div>
+
+        <div class="field">
+          <label for="phone">M-Pesa Phone Number</label>
+          <div class="phone-row">
+            <div class="phone-prefix">🇰🇪 +254</div>
+            <input type="tel" id="phone" placeholder="7XX XXX XXX" style="flex:1;" />
+          </div>
+          <span class="field-error" id="phoneErr">Enter a valid Safaricom/M-Pesa number.</span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="county">County</label>
+            <select id="county">
+              <option value="">Select County</option>
+              <option>Nairobi</option><option>Mombasa</option><option>Kisumu</option>
+              <option>Nakuru</option><option>Uasin Gishu</option><option>Kiambu</option>
+              <option>Machakos</option><option>Meru</option><option>Kakamega</option>
+              <option>Kilifi</option><option>Nyeri</option><option>Murang'a</option>
+              <option>Nyandarua</option><option>Kirinyaga</option><option>Embu</option>
+              <option>Tharaka-Nithi</option><option>Isiolo</option><option>Marsabit</option>
+              <option>Mandera</option><option>Wajir</option><option>Garissa</option>
+              <option>Kwale</option><option>Taita-Taveta</option><option>Tana River</option>
+              <option>Lamu</option><option>Makueni</option><option>Kajiado</option>
+              <option>Narok</option><option>Bomet</option><option>Kericho</option>
+              <option>Nandi</option><option>Trans Nzoia</option><option>West Pokot</option>
+              <option>Samburu</option><option>Laikipia</option><option>Baringo</option>
+              <option>Elgeyo-Marakwet</option><option>Turkana</option><option>Bungoma</option>
+              <option>Busia</option><option>Siaya</option><option>Kisii</option>
+              <option>Nyamira</option><option>Migori</option><option>Homa Bay</option>
+              <option>Vihiga</option><option>Kitui</option>
+            </select>
+            <span class="field-error" id="countyErr">Please select your county.</span>
+          </div>
+          <div class="field">
+            <label for="idNumber">National ID Number</label>
+            <input type="text" id="idNumber" placeholder="12345678" maxlength="8" />
+            <span class="field-error" id="idNumberErr">Enter your 8-digit ID number.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: ID Upload -->
+    <div class="card" style="border-top: 1px solid var(--border);">
+      <div class="section-title">National ID Photos</div>
+
+      <div class="upload-note">
+        ⚠️ &nbsp;<span>Please ensure your <strong>National ID</strong> is clearly visible, not blurry, and not expired. Both sides are required.</span>
+      </div>
+
+      <div class="upload-grid">
+        <div class="upload-zone" id="frontZone"
+          ondragover="handleDragOver(event,'frontZone')"
+          ondragleave="handleDragLeave('frontZone')"
+          ondrop="handleDrop(event,'frontId','frontZone','frontPreview','frontFileName')">
+          <input type="file" id="frontId" accept="image/*"
+            onchange="handleFile(this,'frontZone','frontPreview','frontFileName','frontIcon')"/>
+          <span class="upload-icon" id="frontIcon">🪪</span>
+          <div class="upload-title">Front Side</div>
+          <div class="upload-hint">Showing your name &amp; photo</div>
+          <img class="upload-preview" id="frontPreview" alt=""/>
+          <div class="file-name" id="frontFileName"></div>
+        </div>
+
+        <div class="upload-zone" id="backZone"
+          ondragover="handleDragOver(event,'backZone')"
+          ondragleave="handleDragLeave('backZone')"
+          ondrop="handleDrop(event,'backId','backZone','backPreview','backFileName')">
+          <input type="file" id="backId" accept="image/*"
+            onchange="handleFile(this,'backZone','backPreview','backFileName','backIcon')"/>
+          <span class="upload-icon" id="backIcon">🔄</span>
+          <div class="upload-title">Back Side</div>
+          <div class="upload-hint">Showing district &amp; serial</div>
+          <img class="upload-preview" id="backPreview" alt=""/>
+          <div class="file-name" id="backFileName"></div>
+        </div>
+      </div>
+      <span class="field-error" id="idErr" style="margin-top:10px;">Please upload both sides of your National ID.</span>
+    </div>
+
+    <!-- Section 3: Confirm & Submit -->
+    <div class="card" style="border-top: 1px solid var(--border);">
+      <div class="section-title">Confirm &amp; Receive Reward</div>
+
+      <div class="mpesa-box">
+        <div class="mpesa-icon">📱</div>
+        <div class="mpesa-text">
+          <h4>M-Pesa Payout</h4>
+          <p>After your details are verified, <strong>KES 100</strong> will be sent to your M-Pesa number within 24 hours. Ensure the number you provided is active.</p>
+        </div>
+      </div>
+
+      <div class="terms-row">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I confirm that the information provided is accurate and that the ID photos are genuine. I consent to my data being processed for verification purposes.
+        </label>
+      </div>
+      <span class="field-error" id="termsErr" style="margin-bottom:14px;">You must agree to the terms to continue.</span>
+
+      <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+        <span class="submit-icon">✅</span>
+        Submit &amp; Claim KES 100
+      </button>
+
+      <div class="reward-reminder">🎉 Complete this form to earn <strong>KES 100</strong> on M-Pesa</div>
+    </div>
+
+  </div><!-- /card-form -->
+
+  <!-- SUCCESS -->
+  <div class="success-screen" id="successScreen">
+    <div class="success-flag">🇰🇪</div>
+    <div class="success-icon">✓</div>
+    <div class="success-title">Asante Sana!</div>
+    <p class="success-msg">Your identity has been submitted successfully.<br/>Your details are now under review.</p>
+
+    <div class="success-reward">
+      <div class="success-reward-label">Your Reward</div>
+      <div class="success-reward-amount">KES 100</div>
+      <div class="success-reward-note">💚 Being sent to your M-Pesa shortly</div>
+    </div>
+
+    <div class="success-mpesa">
+      📱 You will receive an <strong>M-Pesa notification</strong> within 24 hours once your details have been verified by our team. Thank you for participating!
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    🔒 &nbsp; Your data is encrypted and stored securely &nbsp;|&nbsp; 🇰🇪 Kenya
+  </div>
+
+</div><!-- /wrapper -->
+
+<script>
+  // Init: hide errors
+  document.getElementById('idErr').style.display = 'none';
+  document.getElementById('termsErr').style.display = 'none';
+
+  function handleFile(input, zoneId, previewId, fileNameId, iconId) {
+    const file = input.files[0];
+    if (!file) return;
+    const zone = document.getElementById(zoneId);
+    const preview = document.getElementById(previewId);
+    const fileNameEl = document.getElementById(fileNameId);
+    const icon = document.getElementById(iconId);
+
+    zone.classList.add('has-file');
+    icon.textContent = '✅';
+
+    const reader = new FileReader();
+    reader.onload = e => {
+      preview.src = e.target.result;
+      preview.classList.add('visible');
+    };
+    reader.readAsDataURL(file);
+
+    const name = file.name.length > 20 ? file.name.slice(0,17)+'...' : file.name;
+    fileNameEl.textContent = '✓ ' + name;
+    fileNameEl.classList.add('visible');
+
+    updateSteps();
+  }
+
+  function handleDragOver(e, zoneId) {
+    e.preventDefault();
+    document.getElementById(zoneId).classList.add('drag-over');
+  }
+
+  function handleDragLeave(zoneId) {
+    document.getElementById(zoneId).classList.remove('drag-over');
+  }
+
+  function handleDrop(e, inputId, zoneId, previewId, fileNameId) {
+    e.preventDefault();
+    document.getElementById(zoneId).classList.remove('drag-over');
+    const files = e.dataTransfer.files;
+    if (!files.length) return;
+    const input = document.getElementById(inputId);
+    const dt = new DataTransfer();
+    dt.items.add(files[0]);
+    input.files = dt.files;
+
+    const iconId = zoneId === 'frontZone' ? 'frontIcon' : 'backIcon';
+    handleFile(input, zoneId, previewId, fileNameId, iconId);
+  }
+
+  function updateSteps() {
+    const hasPersonal = document.getElementById('firstName').value &&
+                        document.getElementById('phone').value;
+    const hasFront = !!document.getElementById('frontId').files[0];
+    const hasBack  = !!document.getElementById('backId').files[0];
+
+    if (hasPersonal) {
+      document.getElementById('step1').classList.add('done');
+      document.getElementById('step2').classList.add('active');
+    }
+    if (hasFront && hasBack) {
+      document.getElementById('step2').classList.add('done');
+      document.getElementById('step3').classList.add('active');
+    }
+  }
+
+  function validate() {
+    let ok = true;
+
+    const setField = (id, errId, condition) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      if (!condition) {
+        el.classList.add('error'); el.classList.remove('valid');
+        err.classList.add('visible'); ok = false;
+      } else {
+        el.classList.remove('error'); el.classList.add('valid');
+        err.classList.remove('visible');
+      }
+    };
+
+    setField('firstName', 'firstNameErr', document.getElementById('firstName').value.trim().length > 1);
+    setField('lastName',  'lastNameErr',  document.getElementById('lastName').value.trim().length > 1);
+    setField('email', 'emailErr', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value.trim()));
+
+    const digits = document.getElementById('phone').value.replace(/\D/g,'');
+    setField('phone', 'phoneErr', digits.length >= 9);
+
+    setField('county', 'countyErr', document.getElementById('county').value !== '');
+
+    const idNum = document.getElementById('idNumber').value.replace(/\D/g,'');
+    setField('idNumber', 'idNumberErr', idNum.length === 8);
+
+    // IDs
+    const front = !!document.getElementById('frontId').files[0];
+    const back  = !!document.getElementById('backId').files[0];
+    const idErr = document.getElementById('idErr');
+    if (!front || !back) {
+      idErr.style.display = 'block'; ok = false;
+    } else {
+      idErr.style.display = 'none';
+    }
+
+    // Terms
+    const terms = document.getElementById('terms').checked;
+    const termsErr = document.getElementById('termsErr');
+    if (!terms) {
+      termsErr.style.display = 'block'; ok = false;
+    } else {
+      termsErr.style.display = 'none';
+    }
+
+    return ok;
+  }
+
+  function submitForm() {
+    if (!validate()) return;
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      document.getElementById('cardForm').classList.add('hidden');
+      document.querySelector('.steps-bar').style.display = 'none';
+      document.getElementById('successScreen').classList.add('visible');
+      document.getElementById('step4').classList.add('done','active');
+    }, 1400);
+  }
+
+  // Live step update on input
+  ['firstName','phone'].forEach(id => {
+    document.getElementById(id).addEventListener('input', updateSteps);
+  });
+</script>
+</body>
+</html>
